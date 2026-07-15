@@ -180,6 +180,53 @@
   .faq-item[open] summary::after { content: "\2013"; }
   .faq-item p { color: var(--muted); font-size: 15.5px; padding: 0 0 20px; }
 
+  /* Pricing tiers */
+  .pricing { background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .tier-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+  .tier { border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.05); padding: 28px 28px 0; display: flex; flex-direction: column; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+  .tier:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,72,18,0.12); }
+  .tier-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .tier-num { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--green-light); display: grid; place-items: center; }
+  .tier-num svg { width: 23px; height: 23px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .tier-head h3 { font-size: 26px; line-height: 1.08; }
+  .tier-sub { display: block; font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--green-light); margin-top: 4px; }
+  .tier:not(.featured) { padding-top: 0; }
+  .tier:not(.featured) .tier-head { background: var(--green-soft); margin: 0 -28px 16px; padding: 22px 26px 20px; border-bottom: 1px solid var(--border); }
+  .tier-tag { font-family: var(--serif); color: var(--green-dark); margin: 0 0 18px; font-size: 16.5px; line-height: 1.4; position: relative; padding-left: 14px; }
+  .tier-tag::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 3px; border-radius: 2px; background: var(--green-light); }
+  .tier-plus { display: inline-block; background: linear-gradient(100deg, var(--green-light) 0%, var(--green-dark) 100%); color: #fff; font-weight: 700; font-size: 12px; letter-spacing: .11em; text-transform: uppercase; padding: 8px 17px; border-radius: 20px; margin: 0 0 14px; align-self: flex-start; }
+  .feat { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 10px; }
+  .feat li { display: grid; grid-template-columns: auto 1fr; gap: 11px; align-items: start; font-size: 14.5px; line-height: 1.45; }
+  .feat li > svg { width: 18px; height: 18px; flex: none; stroke: var(--green-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
+  .feat sup { font-size: .62em; vertical-align: super; line-height: 0; margin-left: 1px; }
+  .nothead { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(0,0,0,0.42); margin: 2px 0 8px; }
+  .notfeat { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 6px; }
+  .notfeat li { position: relative; padding-left: 27px; font-size: 13.5px; line-height: 1.45; color: rgba(0,0,0,0.55); }
+  .notfeat li::before { content: "\00d7"; position: absolute; left: 3px; top: -2px; color: rgba(0,0,0,0.32); font-weight: 700; font-size: 16px; }
+  .tier-best { margin-top: auto; margin-bottom: 18px; padding-top: 16px; border-top: 1px dashed var(--border); display: flex; align-items: flex-start; gap: 9px; font-size: 14px; color: #33433b; line-height: 1.5; }
+  .tier-best svg { flex: none; width: 18px; height: 18px; stroke: var(--green-light); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 1px; }
+  .tier-best strong { color: var(--green-light); }
+  .tier-foot { margin: 0 -28px; padding: 26px 24px; min-height: 200px; display: flex; flex-direction: column; justify-content: center; background: var(--green-soft); border-top: 1px solid var(--border); text-align: center; }
+  .tier-foot .label { display: block; color: var(--green-light); font-weight: 700; font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 6px; }
+  .tier-foot .price { display: block; font-family: var(--serif); font-size: 30px; color: var(--green-dark); font-weight: 700; line-height: 1.05; }
+  .tier-foot .price sup { font-size: .34em; vertical-align: super; margin-left: 2px; font-weight: 700; }
+  .tier-foot small { display: block; color: rgba(0,0,0,0.55); font-size: 12px; margin-top: 7px; line-height: 1.5; }
+  .tier-foot .waive { display: block; color: var(--green-light); font-size: 11.5px; font-weight: 700; margin-top: 12px; line-height: 1.45; }
+  .tier-btn { display: block; margin-top: 16px; background: var(--green-light); color: #fff; text-align: center; font-weight: 700; font-size: 13.5px; padding: 12px 16px; border-radius: 9px; transition: background .2s ease; }
+  .tier-btn:hover { background: var(--green-dark); }
+  .tier.featured { border: 2px solid var(--green-dark); padding-top: 0; position: relative; box-shadow: 0 18px 40px rgba(0,72,18,0.16); }
+  .tier.featured:hover { box-shadow: 0 22px 46px rgba(0,72,18,0.20); }
+  .tier.featured .banner { margin: 0 -28px 18px; background: linear-gradient(135deg, var(--green-dark) 0%, #00360e 100%); padding: 22px 28px 20px; min-height: 80px; display: flex; align-items: center; }
+  .tier.featured .banner .tier-head { margin-bottom: 0; width: 100%; }
+  .tier.featured .banner h3 { color: #fff; }
+  .tier.featured .banner .tier-num { background: #fff; }
+  .tier.featured .banner .tier-num svg { stroke: var(--green-dark); }
+  .tier.featured .banner .tier-sub { color: #BFE6CB; }
+  .tier.featured .tier-btn { background: var(--green-dark); }
+  .tier.featured .tier-btn:hover { background: #00351a; }
+  .tier.featured .popular { position: absolute; top: 0; right: 0; width: 152px; height: 152px; overflow: hidden; border-top-right-radius: 16px; z-index: 12; pointer-events: none; }
+  .tier.featured .popular span { position: absolute; display: block; top: 30px; right: -42px; width: 196px; transform: rotate(45deg); text-align: center; background: linear-gradient(135deg, #E5C878 0%, var(--gold) 100%); color: #3a2b00; font-weight: 800; font-size: 11px; letter-spacing: .13em; text-transform: uppercase; padding: 9px 0; box-shadow: 0 6px 16px rgba(0,0,0,0.32); }
+
   /* Booking embed */
   .booking-embed { max-width: 920px; margin: 8px auto 0; background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 14px; box-shadow: 0 16px 44px rgba(0,0,0,.07); }
   .cta .local-note { margin: 34px auto 0; font-size: 15px; color: var(--muted); }
@@ -187,6 +234,7 @@
   @media (max-width: 900px) {
     .stats-grid { grid-template-columns: 1fr; gap: 40px; }
     .a-grid { grid-template-columns: 1fr; }
+    .tier-grid { grid-template-columns: 1fr; }
     .bonus-grid { grid-template-columns: 1fr; gap: 36px; }
     .bonus-visual { order: -1; }
     .bonus-visual img { min-height: 300px; }
@@ -424,7 +472,7 @@
       <div class="a-card">
         <div class="a-num">2</div>
         <h3>Plan</h3>
-        <p>We build a personalized strategy around your goals &mdash; and, with Premier, actively manage it for you.</p>
+        <p>We build a personalized strategy around your goals &mdash; and, with <a href="#tier-prem">Premier</a>, actively manage it for you.</p>
       </div>
       <div class="a-card">
         <div class="a-num">3</div>
@@ -436,6 +484,98 @@
     <p style="text-align:center; margin-top:28px">
       <a class="btn-primary" href="#book">Start With a Free Meeting</a>
     </p>
+  </div>
+</section>
+
+<!-- PRICING TIERS -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Three Ways to Work With Us</div>
+      <h2>Faith-aligned help at every level</h2>
+      <p>Whether you&rsquo;re just getting curious or ready for a full partnership, there&rsquo;s a clear path &mdash; and every one of them starts with a free conversation.</p>
+    </div>
+    <div class="tier-grid">
+
+      <!-- 1 DIY -->
+      <article class="tier" id="tier-free">
+        <div class="tier-head"><div class="tier-num" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>DIY<span class="tier-sub">Do it yourself</span></h3></div>
+        <p class="tier-tag">Helpful tools and resources for those who like to take the lead.</p>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01M8 18h4"/></svg><span>Model your future with our <a href="https://www.silkcurtisplanning.com/resource-center/calculators" target="_blank" rel="noopener"><strong>free planning calculators</strong></a> &mdash; the same tools our advisors use</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><span>See what your funds really own with a <strong>complimentary Biblical Portfolio X-Ray</strong></span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span><strong>Protect your family fast</strong> with self-service life insurance through Policygenius Pro</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span><strong>Put your wishes in writing</strong> with discounted estate planning through Trust &amp; Will</span></li>
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span><strong>Optional:</strong> add a free, no-pressure discovery meeting with an advisor whenever you&rsquo;d like</span></li>
+        </ul>
+        <p class="nothead">Not included</p>
+        <ul class="notfeat">
+          <li>Personalized advice or recommendations</li>
+          <li>An advisor-built, faith-aligned financial plan (that&rsquo;s Essential)</li>
+          <li>A managed, biblically screened portfolio (that&rsquo;s Premier)</li>
+        </ul>
+        <p class="tier-best"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg><span><strong>Best for:</strong> people who are comfortable doing everything themselves.</span></p>
+        <div class="tier-foot">
+          <span class="label">No Advisory Fee</span>
+          <span class="price">$0<sup><a href="#fn5">5</a></sup></span>
+          <a class="tier-btn" href="#book">Start for free</a>
+        </div>
+      </article>
+
+      <!-- 2 Essential -->
+      <article class="tier" id="tier-ess">
+        <div class="tier-head"><div class="tier-num" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22V11"/><path d="M12 11C12 7.5 9.2 5 5 5c0 3.6 2.9 6 7 6z"/><path d="M12 13c0-3 2.9-5.2 7-5.2 0 3-2.9 5.2-7 5.2z"/></svg></div><h3>Essential<span class="tier-sub">Get a professional plan</span></h3></div>
+        <p class="tier-tag">A one-time engagement that hands you a complete, advisor-built financial plan &mdash; shaped around your goals <em>and</em> your faith.</p>
+        <span class="tier-plus">Everything in DIY, PLUS</span>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span><strong>Start with at least one</strong> free, no-pressure discovery meeting with an advisor</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span>A <strong>personalized, advisor-built financial plan</strong> around your goals, family &amp; timeline</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg><span>A <strong>clear retirement &amp; income strategy</strong> &mdash; how much to save, how to invest, and how to draw income</span></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M15 9.5a3 3 0 0 0-3-1.5c-1.7 0-3 .9-3 2.2 0 1.4 1.2 1.9 3 2.3 1.8.4 3 .9 3 2.3 0 1.3-1.3 2.2-3 2.2a3 3 0 0 1-3-1.5"/></svg><span><strong>Cash-flow, savings &amp; tax-smart guidance</strong>, plus <strong>biblically responsible investment</strong> &amp; insurance recommendations</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg><span>A <strong>comprehensive strategy meeting</strong> with a prioritized, step-by-step action list you can follow</span></li>
+        </ul>
+        <p class="nothead">Not included</p>
+        <ul class="notfeat">
+          <li>Implementation &mdash; you put the plan into action yourself</li>
+          <li>Ongoing management &amp; plan updates (that&rsquo;s Premier)</li>
+          <li>Proactive, ongoing tax-aware planning (that&rsquo;s Premier)</li>
+        </ul>
+        <p class="tier-best"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg><span><strong>Best for:</strong> people who want a complete, faith-aligned plan and are ready to put it into action on their own.</span></p>
+        <div class="tier-foot">
+          <span class="label">One-Time Fee</span>
+          <span class="price">$1,500<sup><a href="#fn6">6</a></sup></span>
+          <small>Plan delivered within 2 weeks of your discovery meeting</small>
+          <span class="waive">Upgrade to Premier while we&rsquo;re building your plan and the $1,500 is waived.</span>
+          <a class="tier-btn" href="#book">Book a free discovery meeting</a>
+        </div>
+      </article>
+
+      <!-- 3 Premier -->
+      <article class="tier featured" id="tier-prem">
+        <span class="popular"><span>&#9733; Most Popular</span></span>
+        <div class="banner">
+          <div class="tier-head"><div class="tier-num" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/><path d="M12 21 8 9l3-6M12 21l4-12-3-6"/></svg></div><h3>Premier<span class="tier-sub">A full partnership</span></h3></div>
+        </div>
+        <p class="tier-tag">A complete partnership &mdash; we manage the plan and the biblically screened portfolio for you.</p>
+        <span class="tier-plus">Everything in Essential, PLUS</span>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg><span><strong>Ongoing management of your biblically screened portfolio</strong> &mdash; actively monitored &amp; rebalanced against the four pillars, with <strong>no separate trading fees</strong></span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg><span><strong>Comprehensive financial planning</strong> that evolves as your life &mdash; and your calling &mdash; changes</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg><span><strong>Local, live support &mdash; no phone trees</strong> &mdash; and we communicate however you prefer (phone, in person, video, email, or text)</span></li>
+          <li><svg viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg><span><strong>Proactive, tax-aware planning</strong> with regular reviews held on your schedule</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg><span><strong>Charitable giving, estate &amp; legacy planning</strong> &mdash; steward what God has entrusted to you across generations</span></li>
+        </ul>
+        <p class="tier-best"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg><span><strong>Best for:</strong> families who want a proactive, hands-on partner aligning their entire financial life with their faith.</span></p>
+        <div class="tier-foot">
+          <span class="label">Annual Advisory Fee</span>
+          <span class="price">1.35%<span style="font-size:0.6em; font-weight:700"> or less</span><sup><a href="#fn7">7</a></sup></span>
+          <small>$250,000 minimum to get started</small>
+          <small>Not there yet? <a href="#tier-ess">Start with an Essential plan</a> and grow into Premier.</small>
+          <a class="tier-btn" href="#book">Book a free discovery meeting</a>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -523,6 +663,9 @@
       4. Screening categories reflect areas of overlap in the publicly available exclusion criteria of major faith-based fund managers, including <a href="https://inspireinsight.com/faq" target="_blank" rel="noopener">Inspire Investing</a>, <a href="https://timothyplan.com" target="_blank" rel="noopener">Timothy Plan</a>, <a href="https://www.guidestonefunds.com/Why-We-Screen" target="_blank" rel="noopener">GuideStone Funds</a>, <a href="https://www.eventideinvestments.com/investment-approach" target="_blank" rel="noopener">Eventide</a>, and <a href="https://avemariafunds.com/investment-process.php" target="_blank" rel="noopener">Ave Maria Mutual Funds</a>. Individual managers&rsquo; screens vary; not every manager screens every category listed.
     </div>
     <div class="disclosure">
+      <p id="fn5"><sup>5</sup> Free to use our tools and to meet with us. Some optional third-party services &mdash; such as life insurance through Policygenius Pro or estate planning through Trust &amp; Will &mdash; may carry their own fees. Policygenius and Trust &amp; Will are independent third parties and are not affiliated with Northeast Planning Associates, Inc. or LPL Financial.</p>
+      <p id="fn6"><sup>6</sup> Upgrade to Premier while we&rsquo;re building your plan and this fee is waived.</p>
+      <p id="fn7"><sup>7</sup> Your rate is set by your assets, so it starts at 1.35% and steps down from there. The more we manage, the less you pay. Premier advisory fees are asset-based. 1.35% is the maximum annual advisory fee; the rate applicable to your account declines as assets under management increase under a tiered schedule. A $250,000 account minimum applies. The specific fee that applies to you is described in your written advisory agreement.</p>
       <p>Securities and advisory services offered through LPL Financial, a registered investment advisor.</p>
       <p>Biblically Responsible Investing involves investment considerations and screening criteria that may differ from traditional investment strategies and may impact diversification and performance. No strategy assures success or protects against loss. All investing involves risk, including the potential loss of principal. Statistics cited are from third-party sources believed to be reliable but are not guaranteed. This material is for informational purposes only and is not a recommendation or solicitation to buy any security.</p>
       <p>&copy; 2026 Northeast Planning Associates, Inc. All rights reserved.</p>
