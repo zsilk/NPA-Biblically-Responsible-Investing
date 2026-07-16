@@ -240,6 +240,11 @@
   .pfeat { list-style: none; margin: 0 0 22px; padding: 0; }
   .pfeat li { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; font-size: 15.5px; color: var(--ink); line-height: 1.45; }
   .pfeat li::before { content: "\2713"; color: #fff; background: var(--green-light); width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; flex: 0 0 20px; margin-top: 2px; }
+  .pnot-title { font-family: var(--sans); font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+  .pnot { list-style: none; margin: 0 0 22px; padding: 0; }
+  .pnot li { display: flex; align-items: flex-start; gap: 10px; padding: 5px 0; font-size: 14.5px; color: var(--muted); line-height: 1.45; }
+  .pnot li::before { content: "\2715"; color: var(--muted); background: #EEF1EE; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; flex: 0 0 20px; margin-top: 2px; }
+  .pnot li a { color: var(--green-dark); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(0,72,18,.3); }
   .pbest { margin-top: auto; border-top: 1px dashed var(--border); padding-top: 14px; font-size: 14px; color: var(--muted); }
   .pbest strong { color: var(--green-dark); }
   .pfoot { text-align: center; border-top: 1px solid var(--border); margin-top: 16px; padding-top: 20px; }
@@ -605,6 +610,12 @@
           <li>Self-service life insurance and discounted estate documents</li>
           <li>Add a free, no-pressure meeting with an advisor whenever you&rsquo;d like</li>
         </ul>
+        <p class="pnot-title">What&rsquo;s not covered</p>
+        <ul class="pnot">
+          <li>A financial plan built for you &mdash; the tools are yours, but the work is too</li>
+          <li>Personalized investment recommendations</li>
+          <li>An advisor watching your accounts or checking in as life changes</li>
+        </ul>
         <p class="pbest"><strong>Best for:</strong> people who are comfortable doing everything themselves.</p>
         <div class="pfoot">
           <span class="plabel">No Advisory Fee</span>
@@ -629,6 +640,12 @@
           <li>A biblically screened investment recommendation you can implement yourself</li>
           <li>A clear retirement &amp; income strategy, with cash-flow and tax-smart guidance</li>
           <li>A strategy meeting with a prioritized, step-by-step action list</li>
+        </ul>
+        <p class="pnot-title">What&rsquo;s not covered</p>
+        <ul class="pnot">
+          <li>Implementation &mdash; you put the plan into action yourself</li>
+          <li>Ongoing portfolio management, monitoring &amp; rebalancing</li>
+          <li>Plan updates as markets, tax laws, and life change &mdash; that&rsquo;s Premier</li>
         </ul>
         <p class="pbest"><strong>Best for:</strong> people who want a complete, professional plan and are ready to put it into action on their own.</p>
         <div class="pfoot">
