@@ -275,6 +275,35 @@
   @media (max-width: 900px) {
     .price-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
   }
+
+  /* Header call option */
+  .header-actions { display: flex; align-items: center; gap: 10px; }
+  .header-call { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; color: var(--green-dark); padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 8px; transition: border-color .2s ease, background .2s ease; }
+  .header-call:hover { border-color: var(--green-light); background: var(--green-soft); }
+  .header-call svg { width: 17px; height: 17px; stroke: var(--green-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+  .header-cta .cta-short { display: none; }
+  @media (max-width: 760px) {
+    .header-call span { display: none; }
+    .header-call { padding: 9px 11px; }
+    .header-cta .cta-full { display: none; }
+    .header-cta .cta-short { display: inline; white-space: nowrap; }
+    .header-inner img { height: 28px; }
+  }
+
+  /* Icon circles for Avoid / Affirm / Advocate */
+  .a-card .a-num svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Pricing card emblems */
+  .pcard-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .pcard-head .psub { margin-bottom: 0; }
+  .pemblem { flex: none; width: 46px; height: 46px; border-radius: 12px; background: var(--green-soft); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; }
+  .pemblem svg { width: 24px; height: 24px; stroke: var(--green-light); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Bold highlight color */
+  .manifesto p strong, .faq-item p strong, .pillar .desc strong, .xray-panel .xp strong,
+  .price-card .ptag strong, .a-card p strong, .expect p strong, .cta p strong,
+  .section-head p strong { color: var(--green-dark); }
+  .midcta p strong, .bonus p.intro strong { color: #fff; }
 </style>
 </head>
 <body>
@@ -282,7 +311,10 @@
 <header class="site">
   <div class="wrap header-inner">
     <img src="assets/npa-logo.png" alt="Northeast Planning Associates, Inc." />
-    <a class="header-cta" href="#book">Book a Free Portfolio X&#8209;Ray</a>
+    <div class="header-actions">
+      <a class="header-call" href="tel:+16034311382" aria-label="Call (603) 431-1382"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg><span>(603) 431-1382</span></a>
+      <a class="header-cta" href="#book"><span class="cta-full">Book a Free Portfolio X&#8209;Ray</span><span class="cta-short">Book Free X&#8209;Ray</span></a>
+    </div>
   </div>
 </header>
 
@@ -296,7 +328,7 @@
         <div class="eyebrow">Biblically Responsible Investing</div>
         <h1>Invest like it all belongs to God.</h1>
         <div class="lede">Because it does. Every dollar you steward is an opportunity to reflect your faith and honor Him.</div>
-        <p class="body">You pray for the Kingdom. Your portfolio can help build it. At Northeast Planning Associates, we help you align your investments with your faith &mdash; starting with a free look at what your money owns today.</p>
+        <p class="body">You pray for the Kingdom. Your portfolio can help build it. At Northeast Planning Associates, we help you align your investments with your faith &mdash; starting with a <strong style="color:#fff">free look at what your money owns today</strong>.</p>
         <div class="btn-row">
           <a class="btn-white" href="#book">Book My Free Portfolio X-Ray</a>
           <a class="btn-ghost" href="#how">See How It Works</a>
@@ -341,8 +373,8 @@
   <div class="wrap narrow">
     <div class="kicker" style="text-align:center">Why It Matters</div>
     <p class="lead-quote">Would you want your investments supporting what you pray against? <span class="hl">Most Christians have simply never been given the choice.</span></p>
-    <p>Most Christians have never seen what their mutual funds actually own. Behind the ticker symbols are real companies doing real things &mdash; some that advance human flourishing, and some that may conflict with the values you hold most deeply. Faith-based screening research consistently finds that most broad-market funds quietly hold at least a few of them.</p>
-    <p>Biblically Responsible Investing (BRI) closes that gap. It&rsquo;s the modern application of an ancient truth: we are <em>stewards</em>, not owners. The money in your accounts was entrusted to you by God &mdash; and how you deploy it is worship, not just math.</p>
+    <p>Most Christians have <strong>never seen what their mutual funds actually own</strong>. Behind the ticker symbols are real companies doing real things &mdash; some that advance human flourishing, and some that may conflict with the values you hold most deeply. Faith-based screening research consistently finds that <strong>most broad-market funds quietly hold at least a few of them</strong>.</p>
+    <p>Biblically Responsible Investing (BRI) closes that gap. It&rsquo;s the modern application of an ancient truth: <strong>we are <em>stewards</em>, not owners</strong>. The money in your accounts was entrusted to you by God &mdash; and how you deploy it is <strong>worship, not just math</strong>.</p>
     <p class="scripture-inline">&ldquo;The earth is the Lord&rsquo;s, and everything in it.&rdquo; &nbsp;&mdash;&nbsp;Psalm 24:1 (NASB 2020)</p>
   </div>
 </section>
@@ -357,22 +389,22 @@
     </div>
     <div class="a-grid">
       <div class="a-card">
-        <div class="a-num">1</div>
+        <div class="a-num" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
         <h3>Avoid</h3>
-        <p>Thoughtfully screen out companies whose primary business conflicts with biblical values, such as abortion, pornography, and addiction.</p>
+        <p><strong>Thoughtfully screen out</strong> companies whose primary business conflicts with biblical values, such as abortion, pornography, and addiction.</p>
       </div>
       <div class="a-card">
-        <div class="a-num">2</div>
+        <div class="a-num" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
         <h3>Affirm</h3>
-        <p>Invest with conviction in companies that serve people, strengthen families, and reflect biblical values in how they operate.</p>
+        <p><strong>Invest with conviction</strong> in companies that serve people, strengthen families, and reflect biblical values in how they operate.</p>
       </div>
       <div class="a-card">
-        <div class="a-num">3</div>
+        <div class="a-num" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11v3a1 1 0 0 0 1 1h2l3.5 5a1 1 0 0 0 1.8-.6V5.6a1 1 0 0 0-1.8-.6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a9 9 0 0 1 0 12"/></svg></div>
         <h3>Advocate</h3>
-        <p>Use shareholder engagement to be a positive voice for biblical values where business decisions are made.</p>
+        <p>Use shareholder engagement to be a <strong>positive voice for biblical values</strong> where business decisions are made.</p>
       </div>
     </div>
-    <p style="text-align:center; margin-top:38px; font-family:var(--serif); font-style:italic; font-size:20px; color:var(--green-dark)">And no, faith and returns are not a trade-off. Leading biblically screened funds have delivered performance in line with the S&amp;P 500.<sup style="font-family:var(--sans); font-style:normal; font-size:12px; color:var(--muted)">3</sup></p>
+    <p style="text-align:center; margin-top:38px; font-family:var(--serif); font-style:italic; font-size:20px; color:var(--green-dark)">And no, <strong>faith and returns are not a trade-off</strong>. Leading biblically screened funds have delivered performance in line with the S&amp;P 500.<sup style="font-family:var(--sans); font-style:normal; font-size:12px; color:var(--muted)">3</sup></p>
   </div>
 </section>
 
@@ -380,7 +412,7 @@
 <section class="midcta">
   <div class="wrap">
     <h3>Curious what your money is supporting right now?</h3>
-    <p>Most investors have never looked inside their own funds. One free conversation can change that.</p>
+    <p>Most investors have never looked inside their own funds. <strong>One free conversation can change that.</strong></p>
     <p class="verse-soft" style="color:#BFE6CB; font-size:17px; margin-bottom:26px">&ldquo;For where your treasure is, there your heart will be also.&rdquo; &nbsp;&mdash;&nbsp;Matthew 6:21 (NASB 2020)</p>
     <a class="btn-white" href="#book">Book My Free Portfolio X-Ray</a>
   </div>
@@ -398,28 +430,28 @@
       <div class="pillar">
         <div class="xicon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-7-9.5A4.5 4.5 0 0 1 12 8a4.5 4.5 0 0 1 7 3.5c0 5.15-7 9.5-7 9.5z"/><path d="M4 4l16 16"/></svg></div>
         <h3>Sanctity of Life</h3>
-        <p class="desc">Companies that perform, facilitate, or profit from the ending of unborn life &mdash; screened by every major biblically responsible fund manager.</p>
+        <p class="desc">Companies that perform, facilitate, or profit from the ending of unborn life &mdash; <strong>screened by every major biblically responsible fund manager</strong>.</p>
         <div class="pillar-tags"><span>Abortion providers</span><span>Abortifacient drugs</span><span>Embryonic stem-cell research</span></div>
         <p class="pillar-verse">&ldquo;For You created my innermost parts; You wove me in my mother&rsquo;s womb.&rdquo; <span class="vref">&mdash; Psalm 139:13</span></p>
       </div>
       <div class="pillar">
         <div class="xicon"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg></div>
         <h3>Pornography &amp; Exploitation</h3>
-        <p class="desc">Companies that produce or distribute pornography, or profit from the exploitation of people made in God&rsquo;s image.</p>
+        <p class="desc">Companies that produce or distribute pornography, or profit from the exploitation of <strong>people made in God&rsquo;s image</strong>.</p>
         <div class="pillar-tags"><span>Adult content</span><span>Sexually explicit media</span><span>Human trafficking ties</span></div>
         <p class="pillar-verse">&ldquo;I will set no worthless thing before my eyes.&rdquo; <span class="vref">&mdash; Psalm 101:3</span></p>
       </div>
       <div class="pillar">
         <div class="xicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9h.01M15 15h.01M15 9h.01M9 15h.01M12 12h.01"/></svg></div>
         <h3>Addictive Products</h3>
-        <p class="desc">Companies whose business model depends on addiction &mdash; profiting when people are mastered by something other than Christ.</p>
+        <p class="desc">Companies whose <strong>business model depends on addiction</strong> &mdash; profiting when people are mastered by something other than Christ.</p>
         <div class="pillar-tags"><span>Gambling &amp; casinos</span><span>Tobacco &amp; nicotine</span><span>Cannabis</span><span>Alcohol production</span></div>
-        <p class="pillar-verse">&ldquo;All things are permitted for me, but I will not be mastered by anything.&rdquo; <span class="vref">&mdash; 1 Corinthians 6:12</span></p>
+        <p class="pillar-verse">&ldquo;For by what anyone is overcome, by this he is enslaved.&rdquo; <span class="vref">&mdash; 2 Peter 2:19</span></p>
       </div>
       <div class="pillar">
         <div class="xicon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3zM3 9l18 0"/></svg></div>
         <h3>Degrading Entertainment</h3>
-        <p class="desc">Media and entertainment companies whose content is overtly violent, immoral, or corrosive to families.</p>
+        <p class="desc">Media and entertainment companies whose content is overtly violent, immoral, or <strong>corrosive to families</strong>.</p>
         <div class="pillar-tags"><span>Explicit media</span><span>Gratuitous violence</span><span>Anti-family content</span></div>
         <p class="pillar-verse">&ldquo;Whatever is true, whatever is honorable, whatever is right&hellip; think about these things.&rdquo; <span class="vref">&mdash; Philippians 4:8</span></p>
       </div>
@@ -437,7 +469,7 @@
     <div class="xray-panel">
       <div class="kicker">Not Sure Where to Start?</div>
       <h2>Get a free Biblical Portfolio X&#8209;Ray.</h2>
-      <p class="xp">Bring your current statements to a discovery meeting and we&rsquo;ll look inside your funds together &mdash; showing you exactly what your money owns today, and where it may conflict with the values you hold most deeply. No cost, no obligation, no judgment.</p>
+      <p class="xp">Bring your current statements to a discovery meeting and we&rsquo;ll look inside your funds together &mdash; showing you <strong>exactly what your money owns today</strong>, and where it may conflict with the values you hold most deeply. <strong>No cost, no obligation, no judgment.</strong></p>
       <ul class="xray-points">
         <li>See what your current funds actually hold</li>
         <li>Compare a values-aligned alternative</li>
@@ -457,7 +489,7 @@
       <div>
         <span class="tag">And the bonus&hellip;</span>
         <h2>World-class financial planning, included.</h2>
-        <p class="intro">Aligning your investments with your faith is just the beginning. Behind every biblically responsible portfolio is a full-service planning team obsessed with getting you to &mdash; and through &mdash; retirement with confidence.</p>
+        <p class="intro">Aligning your investments with your faith is just the beginning. Behind every biblically responsible portfolio is a <strong>full-service planning team</strong> obsessed with getting you to &mdash; and through &mdash; <strong>retirement with confidence</strong>.</p>
         <div class="feature-list">
           <div class="feature"><span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><span class="t">Comprehensive Financial Plan</span></div>
           <div class="feature"><span class="check"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></span><span class="t">Retirement Planning</span></div>
@@ -489,17 +521,17 @@
       <div class="a-card">
         <div class="a-num">1</div>
         <h3>Meet</h3>
-        <p>Start with a complimentary discovery meeting &mdash; and take as many as you&rsquo;d like. We&rsquo;ll take the time to understand you, your family, and what you&rsquo;re working toward.</p>
+        <p>Start with a <strong>complimentary discovery meeting</strong> &mdash; and take as many as you&rsquo;d like. We&rsquo;ll take the time to understand you, your family, and what you&rsquo;re working toward.</p>
       </div>
       <div class="a-card">
         <div class="a-num">2</div>
         <h3>Plan</h3>
-        <p>We build a personalized strategy around your goals &mdash; and, with Premier, actively manage it for you.</p>
+        <p>We build a <strong>personalized strategy</strong> around your goals &mdash; and, with Premier, actively manage it for you.</p>
       </div>
       <div class="a-card">
         <div class="a-num">3</div>
         <h3>Grow Together</h3>
-        <p>Put your plan into action with clear next steps and ongoing guidance as your life changes.</p>
+        <p>Put your plan into action with <strong>clear next steps and ongoing guidance</strong> as your life changes.</p>
       </div>
     </div>
     <p class="verse-soft" style="color:var(--green-dark); font-size:18px; margin-top:38px">&ldquo;Without consultation, plans are frustrated, but with many counselors they succeed.&rdquo; &nbsp;&mdash;&nbsp;Proverbs 15:22 (NASB 2020)</p>
@@ -520,9 +552,14 @@
     <div class="price-grid">
 
       <div class="price-card">
-        <h3>DIY</h3>
-        <p class="psub">Do it yourself</p>
-        <p class="ptag">Free tools and resources for stewards who like to take the lead.</p>
+        <div class="pcard-head">
+          <div>
+            <h3>DIY</h3>
+            <p class="psub">Do it yourself</p>
+          </div>
+          <div class="pemblem" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        </div>
+        <p class="ptag"><strong>Free tools and resources</strong> for stewards who like to take the lead.</p>
         <ul class="pfeat">
           <li>A free Biblical Portfolio X&#8209;Ray &mdash; see what your funds own today</li>
           <li>Our proprietary planning calculators &mdash; the same tools our advisors use</li>
@@ -540,9 +577,14 @@
       </div>
 
       <div class="price-card">
-        <h3>Essential</h3>
-        <p class="psub">Get a professional plan</p>
-        <p class="ptag">A one-time engagement that hands you a complete, faith-aligned financial plan.</p>
+        <div class="pcard-head">
+          <div>
+            <h3>Essential</h3>
+            <p class="psub">Get a professional plan</p>
+          </div>
+          <div class="pemblem" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22V11"/><path d="M12 11C12 7.5 9.2 5 5 5c0 3.6 2.9 6 7 6z"/><path d="M12 13c0-3 2.9-5.2 7-5.2 0 3-2.9 5.2-7 5.2z"/></svg></div>
+        </div>
+        <p class="ptag">A one-time engagement that hands you a <strong>complete, faith-aligned financial plan</strong>.</p>
         <span class="plus-chip">Everything in DIY, plus</span>
         <ul class="pfeat">
           <li>A personalized, advisor-built financial plan around your goals, family &amp; faith</li>
@@ -561,9 +603,14 @@
 
       <div class="price-card featured">
         <span class="pop-badge">&#9733; Most Popular</span>
-        <h3>Premier</h3>
-        <p class="psub">A full partnership</p>
-        <p class="ptag">We manage the plan and the portfolio &mdash; every holding screened against your convictions.</p>
+        <div class="pcard-head">
+          <div>
+            <h3>Premier</h3>
+            <p class="psub">A full partnership</p>
+          </div>
+          <div class="pemblem" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20"/><path d="M12 21 8 9l3-6M12 21l4-12-3-6"/></svg></div>
+        </div>
+        <p class="ptag">We manage the plan and the portfolio &mdash; <strong>every holding screened against your convictions</strong>.</p>
         <span class="plus-chip">Everything in Essential, plus</span>
         <ul class="pfeat">
           <li>A biblically screened portfolio, built and professionally managed for you</li>
@@ -604,27 +651,27 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>Will I sacrifice returns by investing biblically?</summary>
-        <p>It&rsquo;s the most common question we hear &mdash; and a fair one. Values-aligned portfolios are built with the same discipline around diversification, cost, and risk as any portfolio we manage, and some leading biblically screened funds have performed in line with broad market benchmarks (see the sources in the footer). That said, past performance is not indicative of future results, and any screening approach can perform differently than the broad market.</p>
+        <p>It&rsquo;s the most common question we hear &mdash; and a fair one. Values-aligned portfolios are built with <strong>the same discipline around diversification, cost, and risk</strong> as any portfolio we manage, and some leading biblically screened funds have <strong>performed in line with broad market benchmarks</strong> (see the sources in the footer). That said, past performance is not indicative of future results, and any screening approach can perform differently than the broad market.</p>
       </details>
       <details class="faq-item">
         <summary>What exactly is a Biblical Portfolio X-Ray?</summary>
-        <p>A live review of your current holdings during your free discovery meeting. We look inside the funds you already own, show you which companies and activities your dollars are supporting, and walk through what a values-aligned alternative could look like. There&rsquo;s no cost, and the findings are yours to keep whether or not we ever work together.</p>
+        <p>A <strong>live review of your current holdings</strong> during your free discovery meeting. We look inside the funds you already own, show you which companies and activities your dollars are supporting, and walk through what a values-aligned alternative could look like. There&rsquo;s no cost, and <strong>the findings are yours to keep</strong> whether or not we ever work together.</p>
       </details>
       <details class="faq-item">
         <summary>Do I have to move all my accounts to get started?</summary>
-        <p>No. Many families start with a single account &mdash; an old 401(k), an IRA, or a brokerage account &mdash; and expand from there only if it&rsquo;s a good fit for them.</p>
+        <p>No. Many families <strong>start with a single account</strong> &mdash; an old 401(k), an IRA, or a brokerage account &mdash; and expand from there only if it&rsquo;s a good fit for them.</p>
       </details>
       <details class="faq-item">
         <summary>How much does it cost?</summary>
-        <p>Discovery meetings are always free &mdash; take as many as you need. If we end up working together, there are <a href="#pricing">three clear ways to start</a>: free DIY tools, a $1,500 one-time plan, or full-service management from 1.35% or less per year. Everything is explained in plain English and in writing before you commit to anything.</p>
+        <p>Discovery meetings are <strong>always free</strong> &mdash; take as many as you need. If we end up working together, there are <a href="#pricing">three clear ways to start</a>: free DIY tools, a $1,500 one-time plan, or full-service management from 1.35% or less per year. Everything is explained <strong>in plain English and in writing</strong> before you commit to anything.</p>
       </details>
       <details class="faq-item">
         <summary>Do I have to be a Christian to work with you?</summary>
-        <p>Not at all. We serve anyone who wants thoughtful, values-aligned planning. We simply specialize in helping Christians whose deepest desire is for their portfolio to reflect their faith.</p>
+        <p>Not at all. <strong>We serve anyone</strong> who wants thoughtful, values-aligned planning. We simply specialize in helping Christians whose deepest desire is for their portfolio to reflect their faith.</p>
       </details>
       <details class="faq-item">
         <summary>We don&rsquo;t live near Newington &mdash; can we still work with you?</summary>
-        <p>Yes. We&rsquo;re based on the New Hampshire Seacoast and meet with families in person across NH and New England &mdash; and virtually with clients around the country. Distance is never the obstacle.</p>
+        <p>Yes. We&rsquo;re based on the New Hampshire Seacoast and meet with families in person across NH and New England &mdash; and <strong>virtually with clients around the country</strong>. Distance is never the obstacle.</p>
       </details>
     </div>
   </div>
@@ -635,7 +682,7 @@
   <div class="wrap">
     <div class="kicker" style="text-align:center">Your Money. Your Faith. Finally Aligned.</div>
     <h2>Let&rsquo;s build a portfolio you can pray over.</h2>
-    <p>Pick a time below for your free Portfolio X&#8209;Ray &mdash; see what your investments are supporting today, and how they could better reflect your faith.</p>
+    <p>Pick a time below for your <strong>free Portfolio X&#8209;Ray</strong> &mdash; see what your investments are supporting today, and how they could better reflect your faith.</p>
     <div class="expect-row">
       <div class="expect">
         <h4>What to bring</h4>
@@ -647,7 +694,7 @@
       </div>
       <div class="expect">
         <h4>What you&rsquo;ll leave with</h4>
-        <p>A one-page summary of the findings &mdash; yours to keep whether or not we ever work together.</p>
+        <p>A <strong>one-page summary of the findings</strong> &mdash; yours to keep whether or not we ever work together.</p>
       </div>
     </div>
     <p class="reassure-line">No cost. No obligation. No judgment. And as fiduciaries, we&rsquo;re required to put your interests first &mdash; we&rsquo;d do it that way anyway.</p>
@@ -660,15 +707,15 @@
     <div class="booking-faq">
       <details class="faq-item">
         <summary>Will this be a sales pitch?</summary>
-        <p>No. The meeting is a conversation about your goals and a look inside your current funds. You leave with your findings either way &mdash; there&rsquo;s nothing to buy and nothing to sign.</p>
+        <p>No. The meeting is a conversation about your goals and a look inside your current funds. You leave with your findings either way &mdash; there&rsquo;s <strong>nothing to buy and nothing to sign</strong>.</p>
       </details>
       <details class="faq-item">
         <summary>Do I need anything prepared?</summary>
-        <p>A recent account statement is helpful for the X&#8209;Ray, but not required. Plenty of families book the first meeting just to talk.</p>
+        <p>A recent account statement is helpful for the X&#8209;Ray, but <strong>not required</strong>. Plenty of families book the first meeting just to talk.</p>
       </details>
       <details class="faq-item">
         <summary>What if I&rsquo;m not ready to move anything?</summary>
-        <p>That&rsquo;s fine &mdash; most people aren&rsquo;t. There&rsquo;s no deadline and no follow-up pressure. The X&#8209;Ray simply gives you clarity to act on whenever you&rsquo;re ready.</p>
+        <p>That&rsquo;s fine &mdash; most people aren&rsquo;t. There&rsquo;s <strong>no deadline and no follow-up pressure</strong>. The X&#8209;Ray simply gives you clarity to act on whenever you&rsquo;re ready.</p>
       </details>
     </div>
     <p class="phone-cta">Prefer to talk it through right now? <a href="tel:+16034311382">Call (603) 431-1382</a></p>
