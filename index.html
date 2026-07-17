@@ -126,11 +126,6 @@
   .bonus-visual { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,.3); }
   .bonus-visual img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; display: block; }
 
-  /* Verse band */
-  .verseband { background: var(--green-deep); color: #fff; text-align: center; padding: 104px 0; }
-  .verseband .quote { font-family: var(--serif); font-style: italic; font-size: 32px; line-height: 1.4; max-width: 860px; margin: 0 auto 18px; color: #fff; }
-  .verseband .ref { font-family: var(--sans); font-weight: 700; letter-spacing: .06em; color: var(--gold); }
-
   /* CTA */
   .cta { text-align: center; background: var(--cream); }
   .cta h2 { font-size: 44px; margin-bottom: 16px; line-height: 1.08; }
@@ -156,11 +151,6 @@
   .sources a { color: rgba(191,230,203,0.85); word-break: break-word; }
   .disclosure { font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.5); margin-top: 18px; max-width: 940px; }
   .disclosure p { margin-bottom: 8px; }
-
-  /* Mid-page CTA band */
-  .midcta { background: var(--green-dark); color: #fff; text-align: center; padding: 56px 0; }
-  .midcta h3 { color: #fff; font-size: 30px; margin-bottom: 10px; }
-  .midcta p { color: #D3E6D9; font-size: 17px; margin-bottom: 26px; max-width: 620px; margin-left: auto; margin-right: auto; }
 
   /* Portfolio X-Ray */
   .xray { background: var(--green-soft); }
@@ -227,12 +217,10 @@
     .hero-text .lede { font-size: 21px; }
     .section-head h2, .bonus h2, .cta h2 { font-size: 31px; }
     .manifesto .lead-quote { font-size: 24px; }
-    .verseband .quote { font-size: 24px; }
     .card-grid { grid-template-columns: 1fr; }
     .pillar-grid { grid-template-columns: 1fr; }
     .feature-list { grid-template-columns: 1fr; }
     .stat .num { font-size: 46px; }
-    .midcta h3 { font-size: 24px; }
     .xray-panel { padding: 36px 22px; }
     .xray-panel h2 { font-size: 28px; }
     .booking-embed { padding: 8px; }
@@ -281,7 +269,6 @@
   .expect h4 { font-family: var(--sans); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--green-light); margin-bottom: 6px; }
   .expect p { font-size: 15px; color: var(--muted); margin: 0; }
   .reassure-line { font-weight: 700; color: var(--green-dark); font-size: 16px; margin-bottom: 18px !important; }
-  .booking-faq { max-width: 920px; margin: 26px auto 0; text-align: left; }
   .phone-cta { margin-top: 26px !important; font-size: 16px !important; }
   .phone-cta a { font-weight: 700; color: var(--green-dark); text-decoration: underline; }
   .contact-item a { color: var(--green-dark); }
@@ -329,7 +316,7 @@
   .manifesto p strong, .faq-item p strong, .pillar .desc strong, .xray-panel .xp strong,
   .price-card .ptag strong, .a-card p strong, .expect p strong, .cta p strong,
   .section-head p strong { color: var(--green-dark); }
-  .midcta p strong, .bonus p.intro strong { color: #fff; }
+  .bonus p.intro strong { color: #fff; }
 
   /* Gold underline accent on section headings */
   .section-head h2::after, .cta > .wrap > h2::after, .xray-panel h2::after { content: ""; display: block; width: 56px; height: 3px; border-radius: 2px; background: var(--gold); margin: 16px auto 0; }
@@ -445,7 +432,7 @@
 </section>
 
 <!-- THREE A's -->
-<section class="threes">
+<section class="threes" id="how">
   <div class="wrap">
     <div class="section-head">
       <div class="kicker">How BRI Works</div>
@@ -470,16 +457,6 @@
       </div>
     </div>
     <p style="text-align:center; margin-top:38px; font-family:var(--serif); font-style:italic; font-size:20px; color:var(--green-dark)">And no, <strong>faith and returns are not a trade-off</strong>. Leading biblically screened funds have delivered performance in line with the S&amp;P 500.<sup style="font-family:var(--sans); font-style:normal; font-size:12px; color:var(--muted)">3</sup></p>
-  </div>
-</section>
-
-<!-- MID CTA -->
-<section class="midcta">
-  <div class="wrap">
-    <h3>Curious what your money could be doing?</h3>
-    <p>Most investors have never looked inside their own funds. <strong>One free conversation can change that.</strong></p>
-    <p class="verse-soft" style="color:#BFE6CB; font-size:17px; margin-bottom:26px">&ldquo;For where your treasure is, there your heart will be also.&rdquo; &nbsp;&mdash;&nbsp;Matthew 6:21 (NASB 2020)</p>
-    <a class="btn-white" href="#book">Book My Free &ldquo;What Do I Really Own?&rdquo; Review</a>
   </div>
 </section>
 
@@ -572,38 +549,6 @@
         <img src="assets/planning-family.jpg" alt="Three generations of a family reviewing their plan together at the table" loading="lazy" decoding="async" />
       </div>
     </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">How It Works</div>
-      <h2>Getting started is simple</h2>
-      <p>And it begins with a free conversation.</p>
-    </div>
-    <div class="a-grid">
-      <div class="a-card">
-        <div class="a-num">1</div>
-        <h3>Meet</h3>
-        <p>A <strong>free discovery meeting</strong> &mdash; take as many as you&rsquo;d like &mdash; to understand you, your family, and your goals.</p>
-      </div>
-      <div class="a-card">
-        <div class="a-num">2</div>
-        <h3>Plan</h3>
-        <p>We build a <strong>personalized strategy</strong> around your goals &mdash; and, with Premier, actively manage it for you.</p>
-      </div>
-      <div class="a-card">
-        <div class="a-num">3</div>
-        <h3>Grow Together</h3>
-        <p>Put your plan into action with <strong>clear next steps and ongoing guidance</strong> as your life changes.</p>
-      </div>
-    </div>
-    <p class="verse-soft" style="color:var(--green-dark); font-size:18px; margin-top:38px">&ldquo;Without consultation, plans are frustrated, but with many counselors they succeed.&rdquo; &nbsp;&mdash;&nbsp;Proverbs 15:22 (NASB 2020)</p>
-    <p style="text-align:center; margin-top:28px">
-      <a class="btn-primary" href="#book">Book My Free &ldquo;What Do I Really Own?&rdquo; Review</a>
-    </p>
   </div>
 </section>
 
@@ -711,14 +656,6 @@
   </div>
 </section>
 
-<!-- VERSE BAND -->
-<section class="verseband">
-  <div class="wrap">
-    <div class="quote">&ldquo;Honor the Lord from your wealth, and from the first of all your produce.&rdquo;</div>
-    <div class="ref">&mdash; Proverbs 3:9 (NASB 2020)</div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq">
   <div class="wrap">
@@ -740,16 +677,8 @@
         <p>A <strong>live review of your current holdings</strong> during your free discovery meeting. We look inside the funds you already own, show you which companies and activities your dollars are supporting, and walk through what a values-aligned alternative could look like. There&rsquo;s no cost, and <strong>the findings are yours to keep</strong> whether or not we ever work together.</p>
       </details>
       <details class="faq-item">
-        <summary>What if I decide this isn&rsquo;t for me?</summary>
-        <p>Then you&rsquo;ll leave with a <strong>clearer picture of your finances than you came with</strong>, and we&rsquo;ll part as friends. Truly &mdash; the review is valuable on its own, and it&rsquo;s yours either way.</p>
-      </details>
-      <details class="faq-item">
         <summary>Do I have to move all my accounts to get started?</summary>
         <p>No. Many families <strong>start with a single account</strong> &mdash; an old 401(k), an IRA, or a brokerage account &mdash; and expand from there only if it&rsquo;s a good fit for them.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How much does it cost?</summary>
-        <p>Discovery meetings are <strong>always free</strong> &mdash; take as many as you need. If we end up working together, there are <a href="#pricing">three clear ways to start</a>: free DIY tools, a $1,500 one-time plan, or full-service management from 1.35% or less per year. Everything is explained <strong>in plain English and in writing</strong> before you commit to anything.</p>
       </details>
       <details class="faq-item">
         <summary>Do I have to be a Christian to work with you?</summary>
@@ -772,17 +701,9 @@
     <p class="blameless">If you&rsquo;ve never looked inside your funds, you&rsquo;re in good company &mdash; most people haven&rsquo;t.</p>
     <div class="section-photo"><img src="assets/meeting-advisor.jpg" alt="A couple smiling in a meeting with their advisor" loading="lazy" decoding="async" /></div>
     <div class="expect-row">
-      <div class="expect">
+      <div class="expect" style="flex:0 1 460px; text-align:center">
         <h4>What to bring</h4>
         <p>A recent statement from any account &mdash; a 401(k), IRA, or brokerage. Or just bring your questions.</p>
-      </div>
-      <div class="expect">
-        <h4>What you&rsquo;ll learn</h4>
-        <p>What your money actually owns today, and what a values-aligned alternative could look like.</p>
-      </div>
-      <div class="expect">
-        <h4>What you&rsquo;ll leave with</h4>
-        <p>A <strong>one-page summary of the findings</strong> &mdash; yours to keep whether or not we ever work together.</p>
       </div>
     </div>
     <p class="reassure-line">No cost. No obligation. No judgment. As fiduciaries, your interests come first &mdash; always.</p>
@@ -792,20 +713,6 @@
       <script type="text/javascript" src="https://cdn.oncehub.com/cal/embed.js" async></script>
       <div data-oh-booking-calendar-id="BKC-Q45LV93N62" style="min-width:320px;height:700px;"></div>
       <!-- OnceHub inline embed END -->
-    </div>
-    <div class="booking-faq">
-      <details class="faq-item">
-        <summary>Will this be a sales pitch?</summary>
-        <p>No. The meeting is a conversation about your goals and a look inside your current funds. You leave with your findings either way &mdash; there&rsquo;s <strong>nothing to buy and nothing to sign</strong>.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do I need anything prepared?</summary>
-        <p>A recent account statement is helpful for the review, but <strong>not required</strong>. Plenty of families book the first meeting just to talk.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What if I&rsquo;m not ready to move anything?</summary>
-        <p>That&rsquo;s fine &mdash; most people aren&rsquo;t. There&rsquo;s <strong>no deadline and no follow-up pressure</strong>. The review simply gives you clarity to act on whenever you&rsquo;re ready.</p>
-      </details>
     </div>
     <p class="phone-cta">Prefer to talk it through right now? <a href="tel:+16034311382">Call (603) 431-1382</a></p>
     <p class="local-note">Proudly serving families like yours across the New Hampshire Seacoast and all of New England &mdash; in person in Newington, NH or virtually anywhere.</p>
